@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link id="theme" rel="stylesheet" href="css/themes/dark.css"/>
     <link id="font" rel="stylesheet" href="css/fonts/typespace.css"/>
+    
+    <style>
+        /* Add this to your CSS */
+        #app {
+            display: none; /* Hide the main content initially */
+        }
+    </style>
 </head>
 <body>
 <div id="loading">
@@ -86,6 +93,15 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
 
 <script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('app').style.display = 'block';
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+</script>
+
+<script>
     var SMALL = "1,2,3,4,5,6,7,8,9,10,11,12,14,17,100,1000";
     var EXPONENTS = "1000,10000,10^6,10^9,10^12,10^15";
     var GIANTS = [inf, ω, ε0, ζ0, η0, Γ0, Ω]
@@ -120,18 +136,16 @@
 <script src="js/components/layer-locked-button.js"></script>
 <script src="js/components/aleph-locked-button.js"></script>
 <script src="js/components/restack-locked-button.js"></script>
-<script src="js/components/generator.js"></script>
-<script src="js/components/generator-table.js"></script>
-<script src="js/components/resource-name.js"></script>
-<script src="js/components/resource-display.js"></script>
-<script src="js/components/upgrade.js"></script>
-<script src="js/components/resource-upgrade.js"></script>
-<script src="js/components/aleph-upgrade.js"></script>
-<script src="js/components/restack-upgrade.js"></script>
-<script src="js/components/dynamic-upgrade.js"></script>
-<script src="js/components/upgrade-container.js"></script>
-<script src="js/components/upgrade-tree.js"></script>
-<script src="js/components/upgrade-tree-arrow.js"></script>
+<script src="js/components/layer-navigation.js"></script>
+<script src="js/components/news-ticker.js"></script>
+<script src="js/components/achievement-tab.js"></script>
+<script src="js/components/settings-menu.js"></script>
+<script src="js/components/volatility-tab.js"></script>
+<script src="js/components/secret-achievement-tab.js"></script>
+<script src="js/components/automator-tab.js"></script>
+<script src="js/components/restack-tab.js"></script>
+<script src="js/components/prestige-layer.js"></script>
+<script src="js/components/aleph-layer.js"></script>
 <script src="js/components/challenge.js"></script>
 <script src="js/components/meta-layer.js"></script>
 <script src="js/components/achievement.js"></script>
