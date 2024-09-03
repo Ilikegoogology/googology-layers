@@ -21,14 +21,14 @@
 </head>
 <body>
 <div id="loading">
-    <h2><span class="omega">Googology</span> L A Y E R S</h2>
+    <h2><span class="Googology">Googology</span> <span class="Layers">Layers</span></h2>
     <p>Starting...</p>
 </div>
 <div id="app">
     <header>
         <nav>
             <div>
-                <h2 id="superImportantTitle"><span class="omega">ω</span>Engine</h2>
+                <h2 id="superImportantTitle"><span class="omega">ω</span> Engine</h2>
                 <button @click="settings.tab = 'Layers'"><img alt="L" class="inline" src="images/layers.svg"/> Layers</button>
                 <button @click="settings.tab = 'Achievements'"><img alt="A" class="inline" src="images/star.svg"/> Achievements</button>
                 <button @click="settings.tab = 'Guide'"><img alt="G" class="inline" src="images/information-circle.svg"/> Guide</button>
@@ -59,8 +59,8 @@
         <achievement-tab v-if="settings.tab === 'Achievements'"></achievement-tab>
         <secret-achievement-tab v-if="settings.tab === 'Secret Achievements'"></secret-achievement-tab>
         <automator-tab v-if="settings.tab === 'Automators'"></automator-tab>
-        <aleph-layer v-if="settings.tab === 'Aleph'"></aleph-layer>
-        <restack-tab v-if="settings.tab === 'ReStack'"></restack-tab>
+        <aleph-layer v-if="settings.tab === 'Chained Arrow'"></aleph-layer>
+        <restack-tab v-if="settings.tab === 'BAN'"></restack-tab>
         <guide-tab v-if="settings.tab === 'Guide'"></guide-tab>
         <changelog-tab v-if="settings.tab === 'Changelog'"></changelog-tab>
         <engine-tab v-if="settings.tab === 'Engine Changelog'"></engine-tab>
@@ -70,8 +70,7 @@
     <footer>
         <div>
             <a href="https://veprogames.github.io/omega-layers" target="_blank">Original Game</a>
-            <a href="https://github.com/jwklong/omega-engine" target="_blank">Source Code</a>
-            <a href="https://discord.gg/xF9KYsYsMA" target="_blank">Community Server</a>
+            <a href="https://github.com/jwklong/omega-engine" target="_blank">Engine</a>
         </div>
     </footer>
 </div>
@@ -134,45 +133,13 @@
 <script src="js/components/upgrade-tree.js"></script>
 <script src="js/components/upgrade-tree-arrow.js"></script>
 <script src="js/components/challenge.js"></script>
-<script src="js/components/challenge-table.js"></script>
-<script src="js/components/current-challenge.js"></script>
-<script src="js/components/layer-statistics.js"></script>
-<script src="js/components/prestige-layer.js"></script>
-<script src="js/components/layer-navigation.js"></script>
-<script src="js/components/settings-menu.js"></script>
-<script src="js/components/volatility-tab.js"></script>
-<script src="js/components/aleph-layer.js"></script>
-<script src="js/components/automator.js"></script>
-<script src="js/components/automator-tab.js"></script>
-<script src="js/components/restack-tab.js"></script>
 <script src="js/components/meta-layer.js"></script>
-<script src="js/components/news-ticker.js"></script>
 <script src="js/components/achievement.js"></script>
-<script src="js/components/achievement-tab.js"></script>
-<script src="js/components/secret-achievement-tab.js"></script>
+<script src="js/components/secret-achievement.js"></script>
+<script src="js/components/auto-buyer.js"></script>
 <script src="js/components/notification.js"></script>
-<script src="js/components/notification-container.js"></script>
-<script src="js/components/guide-item.js"></script>
-<script src="js/components/guide-tab.js"></script>
-<script src="js/components/changelog-tab.js"></script>
-<script src="js/components/engine-tab.js"></script>
-<script src="js/components/debug-tab.js"></script>
-<script src="js/components/endgame-tab.js"></script>
-
-<script src="js/data/functions.js"></script>
-<script src="js/data/computed.js"></script>
-<script src="js/data/temp.js"></script>
-<script src="js/data/game.js"></script>
 
 <script src="js/main.js"></script>
-<script>
-    var endgameReq = game.metaLayer.layer.gte(mod.Infinities[0])
-    setInterval(function() {
-        if (endgameReq && !temp.endgameOverride) {
-            game.settings.tab = "Endgame"
-            temp.endgameOverride = true
-        }
-    }, 1000/60)
-</script>
+
 </body>
 </html>
