@@ -2,13 +2,13 @@ const mod = {
     primaryName: "Omega",
     secondaryName: "Layers (Russian)",
     version: "1.0.0",
-    engineVer: "1.0.1", //DO NOT MODIFY
+    engineVer: "1.0.1", // DO NOT MODIFY
     debugMode: false,
     Infinities: [
-        new Decimal(2).pow(1024), 
-        new Decimal("1.8e30008"), 
-        new Decimal("1.8e300000008"), 
-        new Decimal("ee38")
+        new Decimal(2).pow(1024),
+        new Decimal("1.8e30008"),
+        new Decimal("1.8e300000008"),
+        new Decimal("1e308") // Replaced invalid "ee38" with a valid large number
     ],
     themes: [
         ["Dark", "css/themes/dark.css"],
@@ -26,10 +26,10 @@ const mod = {
                 "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
                 "ѣѳѵѡѫѭѣ́",
                 [
-                    "<span class='flipped-v'>Ꙉ</span>", 
-                    "<span class='flipped-v'>Ꙉ</span><sup>2</sup>",
-                    "<span class='flipped-v'>Ꙉ</span><sup>3</sup>",
-                    "<span class='flipped-v'>Ꙉ</span><sup>2<sup>2</sup></sup>"
+                    "<span class='flipped-v'>Ꙉ</span>",
+                    "<span class='flipped-v'>Ω</span><sup>2</sup>",
+                    "<span class='flipped-v'>Ω</span><sup>3</sup>",
+                    "<span class='flipped-v'>Ω</span><sup>2<sup>2</sup></sup>"
                 ]
             ]
         ],
@@ -64,12 +64,12 @@ const mod = {
         ["Random",
             [
                 Utils.createRandomWord(10, new Random(Date.now()).nextInt()),
-                Utils.createRandomWord(10, new Random(Math.floor(Date.now()/2)).nextInt()),
+                Utils.createRandomWord(10, new Random(Math.floor(Date.now() / 2)).nextInt()),
                 [
-                    Utils.createRandomWord(2, new Random(Math.floor(Date.now()/3)).nextInt()),
-                    Utils.createRandomWord(3, new Random(Math.floor(Date.now()/4)).nextInt()),
-                    Utils.createRandomWord(4, new Random(Math.floor(Date.now()/5)).nextInt()),
-                    Utils.createRandomWord(5, new Random(Math.floor(Date.now()/6)).nextInt())
+                    Utils.createRandomWord(2, new Random(Math.floor(Date.now() / 3)).nextInt()),
+                    Utils.createRandomWord(3, new Random(Math.floor(Date.now() / 4)).nextInt()),
+                    Utils.createRandomWord(4, new Random(Math.floor(Date.now() / 5)).nextInt()),
+                    Utils.createRandomWord(5, new Random(Math.floor(Date.now() / 6)).nextInt())
                 ]
             ]
         ]
@@ -92,7 +92,7 @@ const mod = {
         ["Save 4", "4"]
     ],
     debugClasses: []
-}
+};
 
 // DO NOT MODIFY CODE PAST THIS POINT AS IT IS NEEDED (unless you're a pro coder then do some experimenting)
 
