@@ -1,6 +1,6 @@
 const mod = {
-    primaryName: "ω",
-    secondaryName: "Engine",
+    primaryName: "Omega",
+    secondaryName: "Layers (Russian)",
     version: "1.0.0",
     engineVer: "1.0.1", //DO NOT MODIFY
     debugMode: false,
@@ -16,12 +16,12 @@ const mod = {
         ["eXPerience", "css/themes/experience.css"]
     ],
     layerNames: [
-        ["Greek",
+        ["russian",
         [
-            "αβγδεζηθικλμνξοπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
+            "абвгдеёπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
             "ψϝϛͱϻϙͳϸ",
             ["<span class='flipped-v'>Ω</span>", "<span class='flipped-v'>Ω</span><sup>2</sup>","<span class='flipped-v'>Ω</span><sup>3</sup>","<span class='flipped-v'>Ω</span><sup>2<sup>2</sup></sup>"]
-        ]],
+        ]],vvv:l
         ["Latin",
         [
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
